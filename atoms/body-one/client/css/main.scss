@@ -1,0 +1,193 @@
+@import "fonts";
+@import "mq";
+@import "palette";
+@import "enhancer";
+@import "header";
+@import "overall";
+
+.interactive-atom {
+    margin: 0;
+    padding: 0;
+}
+
+.gv-body {
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
+
+        @include mq(tablet) {
+            width: 740px;
+            margin-left: -20px;
+        }
+         @include mq(desktop) {
+            width: 980px;
+            margin-left: -20px;
+        }
+
+        @include mq(leftCol) {
+            width: 1120px;
+            margin-left: -170px;
+        }
+
+        @include mq(wide) {
+            width: 1280px;
+            margin-left: -250px;
+
+        }
+    img {
+        display: block;
+        width: calc(100% - 10px);
+        height: 100%;
+
+        @include mq(tablet) {
+            width: calc(50% - 5px);
+        }
+        @include mq(leftCol) {
+            width: 50%;
+        }
+    }
+}
+
+.gv-body-image__container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.body-image__one {
+    margin-left: 10px;
+
+    @include mq(tablet) {
+        margin-left: 0px;
+    }
+
+    @include mq(leftCol) {
+        margin-left: -10px;
+    }
+}
+
+.body-image__two {
+    margin-right: 10px;
+    margin-top: 10px;
+
+    @include mq(tablet) {
+        margin-top: 25%;
+        margin-right: -10px;
+        margin-left: 10px;
+    }
+    
+
+    @include mq(leftCol) {
+        margin-top: 25%;
+        margin-right: -10px;
+        margin-left: 20px;
+    }
+}
+
+.body-image__two {
+    // margin-top: 25%;
+}
+
+.body-list {
+    list-style: none;
+    @include fs-textSans(3);
+    font-size: 16px;
+    line-height: 2;
+    font-weight: bold;
+    position: relative;
+    padding-left: 10px;
+
+    @include mq(tablet) {
+        position: absolute;
+        top: calc(60% + 20px);
+        left: 4px;
+    }
+    @include mq(desktop) {
+        top: calc(60% + 30px);
+    }
+    @include mq(leftCol) {
+        top: calc(60% + 40px);
+        left: 164px;
+    }
+    @include mq(wide) {
+       top: calc(60% + 50px);
+        left: 244px;
+    }
+
+    li:nth-of-type(1) {
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: -20px;
+        margin-top: 5px;
+        background-image: url("<%= path %>/letters/a.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+        width: 24px;
+        height: 24px;
+        }
+    }
+    li:nth-of-type(2) {
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: -20px;
+        margin-top: 5px;
+        background-image: url("<%= path %>/letters/b.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+        width: 24px;
+        height: 24px;
+        }
+    }
+    li:nth-of-type(3) {
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        margin-top: 5px;
+        left: -20px;
+        background-image: url("<%= path %>/letters/c.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+        width: 24px;
+        height: 24px;
+        }
+    }
+    li:nth-of-type(4) {
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        margin-top: 5px;
+        left: -20px;
+        background-image: url("<%= path %>/letters/d.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+        width: 24px;
+        height: 24px;
+        }
+    }
+    li:nth-of-type(5) {
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        margin-top: 5px;
+        left: -20px;
+        background-image: url("<%= path %>/letters/e.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+        width: 24px;
+        height: 24px;
+        }
+    }
+}
