@@ -156,7 +156,29 @@
 .header-type__agency {
     @include fs-bodyCopy(2);
     font-weight: bold;
+    color: $neutral-46;
     // font-style: italic;
+}
+
+.header-type {
+    position: relative;
+}
+
+.header-type__caption {
+    @include fs-textSans(2);
+    color: $neutral-60;
+    margin-top: 0px;
+
+    @include mq(leftCol) {
+        position: absolute;
+        width: 160px;
+        left: -170px;
+        top: 70px;
+    }
+    @include mq(wide) {
+        left: -240px;
+        width: 210px;
+    }
 }
 
 
@@ -290,7 +312,7 @@
         position: absolute;
         display: block;
         left: -20px;
-        margin-top: 5px;
+        margin-top: 3px;
         background-image: url("<%= path %>/letters/a.svg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -305,7 +327,7 @@
         position: absolute;
         display: block;
         left: -20px;
-        margin-top: 5px;
+        margin-top: 3px;
         background-image: url("<%= path %>/letters/b.svg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -319,7 +341,7 @@
         content: '';
         position: absolute;
         display: block;
-        margin-top: 5px;
+        margin-top: 3px;
         left: -20px;
         background-image: url("<%= path %>/letters/c.svg");
         background-repeat: no-repeat;
@@ -334,7 +356,7 @@
         content: '';
         position: absolute;
         display: block;
-        margin-top: 5px;
+        margin-top: 3px;
         left: -20px;
         background-image: url("<%= path %>/letters/d.svg");
         background-repeat: no-repeat;
@@ -349,7 +371,7 @@
         content: '';
         position: absolute;
         display: block;
-        margin-top: 5px;
+        margin-top: 3px;
         left: -20px;
         background-image: url("<%= path %>/letters/e.svg");
         background-repeat: no-repeat;
@@ -364,7 +386,7 @@
         content: '';
         position: absolute;
         display: block;
-        margin-top: 5px;
+        margin-top: 3px;
         left: -20px;
         background-image: url("<%= path %>/letters/f.svg");
         background-repeat: no-repeat;
@@ -379,7 +401,7 @@
         content: '';
         position: absolute;
         display: block;
-        margin-top: 5px;
+        margin-top: 3px;
         left: -20px;
         background-image: url("<%= path %>/letters/g.svg");
         background-repeat: no-repeat;
