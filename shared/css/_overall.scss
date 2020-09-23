@@ -259,7 +259,7 @@
 .body-list {
     list-style: none;
     @include fs-textSans(3);
-    font-size: 16px;
+    font-size: 14px;
     line-height: 2;
     font-weight: bold;
     position: relative;
@@ -269,6 +269,7 @@
         position: absolute;
         top: calc(60% + 20px);
         left: 4px;
+        max-width: calc(50% - 40px);
     }
     @include mq(desktop) {
         top: calc(60% + 30px);
@@ -276,6 +277,7 @@
     @include mq(leftCol) {
         top: calc(60% + 40px);
         left: 164px;
+        max-width: 360px;
     }
     @include mq(wide) {
        top: calc(60% + 50px);
@@ -350,6 +352,36 @@
         margin-top: 5px;
         left: -20px;
         background-image: url("<%= path %>/letters/e.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+        width: 24px;
+        height: 24px;
+        }
+    }
+      li:nth-of-type(6) {
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        margin-top: 5px;
+        left: -20px;
+        background-image: url("<%= path %>/letters/f.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 5;
+        width: 24px;
+        height: 24px;
+        }
+    }
+       li:nth-of-type(7) {
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        margin-top: 5px;
+        left: -20px;
+        background-image: url("<%= path %>/letters/g.svg");
         background-repeat: no-repeat;
         background-size: contain;
         z-index: 5;
