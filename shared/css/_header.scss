@@ -8,11 +8,12 @@
   &::before {
     content: "";
     display: block;
-    background-image: url("<%= path %>/header-image.png");
+    background-image: url("<%= path %>/header-image.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left 0px bottom 0px;
     height: 56vw;
+
     @include mq(tablet) {
       border-top: 0;
     }
@@ -23,6 +24,8 @@
     }
     @include mq(leftCol) {
       width: 950px;
+      margin-bottom: 10px;
+      background-position: left 0px bottom -10px;
     }
     @include mq(wide) {
       width: 1030px;
@@ -34,7 +37,7 @@
     background-color: $neutral-86;
     position: absolute;
     height: 1px;
-    top: calc(56vw);
+    top: calc(56vw + 10px);
     left: -10px;
 
     @include mq(mobileLandscape) {
@@ -46,7 +49,7 @@
     }
     @include mq(desktop) {
       width: 980px;
-      top: 440px;
+      top: 450px;
     }
     @include mq(leftCol) {
       left: -10px;
@@ -215,7 +218,7 @@ a,
     }
   }
   .headline:after {
-    top: calc(32vw + 10px);
+    top: calc(56vw + 10px);
     width: calc(100% + 10px);
   }
   .standfirst {
