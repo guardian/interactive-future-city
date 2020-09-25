@@ -13,6 +13,7 @@
     background-size: contain;
     background-position: left 0px bottom 0px;
     height: 56vw;
+       margin-bottom: 10px;
 
     @include mq(tablet) {
       border-top: 0;
@@ -24,7 +25,7 @@
     }
     @include mq(leftCol) {
       width: 950px;
-      margin-bottom: 10px;
+   
       background-position: left 0px bottom -10px;
     }
     @include mq(wide) {
@@ -239,5 +240,11 @@ a,
     font-weight: 700;
     margin-top: 36px;
     margin-bottom: 6px;
+  }
+}
+
+.android {
+    .headline:after {
+      display: none;
   }
 }
